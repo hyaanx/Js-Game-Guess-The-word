@@ -119,7 +119,7 @@ let gameLogic = function () {
 };
 
 document.addEventListener("keydown", (event) => {
-  if (event.key.startsWith("Enter")) {
+  if (event.key.startsWith("Enter") && currentTry <= numOfTries) {
     gameLogic();
   }
 });
