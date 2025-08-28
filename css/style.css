@@ -1,0 +1,319 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:root {
+  --main-transition: 0.3s;
+  --main-color: #f44336;
+  --yellow-color: #f9bf29;
+  --black-color: #2f2f2f;
+  --bg-green: #dce5e4;
+}
+
+*::selection {
+  background-color: var(--yellow-color);
+  color: black;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  color: var(--black-color);
+  background-color: #d8d8d893;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+  padding: 0;
+}
+
+*:focus {
+  outline: none;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+p {
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 2;
+}
+
+/* .game {
+  display: flex;
+  margin-block: 50px;
+  justify-content: center;
+
+  .card {
+    width: 50px;
+    height: 50px;
+    border: 1px solid #0f0a0a;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+  }
+} */
+
+h1 {
+  text-align: center;
+  padding: 20px;
+  font-size: 25px;
+  background-color: rgba(255, 255, 255, 0.863);
+  border-radius: 0px 0px 50px 50px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+.guess-game {
+  text-align: center;
+  width: 92%;
+  margin: 20px auto;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  .message { 
+    font-size: 20px;
+    font-weight: 600;
+    padding: 10px;
+    border-radius: 8px;
+    color: #fff;
+  }
+
+  .game-area {
+    .control {
+      display: flex;
+      gap: 15px;
+      padding-left: 20px;
+
+      button {
+        padding: 10px;
+        color: white;
+        border-radius: 4px;
+        font-size: 18px;
+        font-weight: 600;
+        cursor: pointer;
+      }
+
+      button:disabled {
+        background-color: black;
+        opacity: 0.4;
+        cursor: no-drop;
+      }
+
+      .check {
+        background-color: var(--main-color);
+        width: 75%;
+      }
+
+      .Hint {
+        background-color: #009688;
+        width: 100px;
+      }
+    }
+    .inputs {
+      > div {
+        margin-bottom: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+
+        input {
+          background: white;
+          width: 50px;
+          height: 50px;
+          border: 1px solid black;
+          border-radius: 4px;
+          text-align: center;
+          font-size: 24px;
+          font-weight: 500;
+          cursor: pointer;
+          caret-color: var(--main-color);
+          border: none;
+          border: 1px solid #46454573;
+
+          &:focus {
+            border: 1px solid #2ca380;
+          }
+
+          &.value-green {
+            background-color: #18ba89;
+            border-color: #18ba89;
+            color: white;
+          }
+          &.value-orange {
+            background-color: #f89e13;
+            border-color: #f89e13;
+            color: white;
+          }
+          &.value-red {
+            background-color: #ed3e35;
+            border-color: #ed3e35;
+            color: white;
+          }
+          &.value-black {
+            background-color: black;
+          }
+        }
+        &.hid-elm {
+          opacity: 0.5;
+          pointer-events: none;
+        }
+
+        span {
+          font-size: 30px;
+          margin-left: 15px;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+
+  .key-colors {
+    h2 {
+      font-weight: 600;
+      font-size: 22px;
+      margin-bottom: 10px;
+    }
+
+    .key-text {
+      font-weight: 600;
+    }
+    .key-color {
+      display: flex;
+      align-items: center;
+      padding: 15px;
+      background-color: white;
+      margin-bottom: 10px;
+
+      .key {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        margin-right: 10px;
+        &.key-green {
+          background-color: #18ba89;
+        }
+        &.key-orange {
+          background-color: #f89e13;
+        }
+        &.key-red {
+          background-color: #ed3e35;
+        }
+      }
+    }
+  }
+}
+
+.worng {
+  transition: 0.5s;
+  transform: translateX(450px);
+  opacity: 0;
+}
+
+.wrong-show {
+  transform: translateX(0px) !important;
+  opacity: 1 !important;
+}
+
+.border-green {
+  border-color: #18ba89 !important;
+}
+
+.border-red {
+  border-color: #ed3e35 !important;
+}
+
+@media (max-width: 900px) {
+  .guess-game {
+    gap: 10px;
+    & .game-area {
+      & .inputs {
+        & > div {
+          span {
+            font-size: 25px;
+            margin-left: 15px;
+            font-weight: 600;
+            width: 70px;
+          }
+          input {
+            width: 40px;
+            height: 40px;
+            font-size: 20px;
+          }
+        }
+      }
+    }
+    .key-colors {
+      .key-color {
+        .key {
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+
+}
+@media (max-width: 768px) {
+  .guess-game {
+    flex-direction: column;
+    align-items: center;
+
+    .game-area {
+      .control {
+        button {
+          padding: 7px;
+        }
+      }
+      .inputs {
+        > div {
+          span {
+            font-size: 15px;
+          }
+          input {
+            width: 35px;
+            height: 35px;
+            font-size: 16px;
+          }
+        }
+      }
+    }
+
+    .key-colors {
+      width: 100%;
+      margin-top: 30px;
+      .key-color {
+        .key-text {
+          font-size: 14px;
+        }
+        .key {
+          width: 30px;
+          height: 30px;
+          border-radius: 50%;
+          margin-right: 15px;
+        }
+      }
+    }
+  }
+}
+
+
+.bg-green {
+  background-color: #18ba89;
+}
+
+.bg-red {
+  background-color: #ed3e35;
+}

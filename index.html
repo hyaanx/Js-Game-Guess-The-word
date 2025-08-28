@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+            content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/output.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+            rel="stylesheet">
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+        <title>Guess The Word Game</title>
+    </head>
+    <body>
+        <h1>Guess The Word Game</h1>
+        <div class="guess-game">
+            <div class="game-area">
+                <div class="inputs"></div>
+                <div class="control">
+                    <button class="check">Check Word</button>
+                    <button class="Hint"><span></span>Hint</button>
+                </div>
+                </div>
+                <div class="message">
+                </div>
+                <div class="key-colors">
+                    <h2>Key Colors</h2>
+                    <div class="key-color">
+                        <div class="key key-green">
+                        </div>
+                        <div class="key-text">Letter is Correct and In Place</div>
+                    </div>
+                    <div class="key-color">
+                        <div class="key key-orange">
+                        </div>
+                        <div class="key-text">Letter is Correct But Not In Place</div>
+                    </div>
+                    <div class="key-color">
+                        <div class="key key-red">
+                        </div>
+                        <div class="key-text">Letter is Wrong</div>
+                    </div>
+                </div>
+            </div>
+            <div class="worng flex justify-end translate-y-[-580px] mr-5 max-[900px]:translate-y-[-500px] ">
+                <div class="message-wrong flex flex-col gap-2.5 text-xl text-center w-[350px] bg-[#ed3e35] text-white font-semibold rounded-[8px] p-[15px]">
+                    <span>Wrong</span>
+                    You can only write letters
+                </div>
+            </div>
+            
+        <footer></footer>
+
+        <script src="JavaScript/main.js"></script>
+    </body>
+</html>
