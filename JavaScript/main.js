@@ -159,7 +159,7 @@ hint.addEventListener("click", function () {
 });
 
 // ==== End Hint Button ====
-console.log(wordtoGuess);
+
 window.onload = function () {
   generateInpute();
 };
