@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/output.css">
+        <title>Hangman Game</title>
+    </head>
+    <body>
+        <div class="container">
+            <div class="game-info">
+                <div class="game-name">Hangman</div>
+                <div class="category">
+                    Word From: <span></span>
+                </div>
+            </div>
+
+            <div class="image">
+                <img
+                    src=""
+                    alt>
+            </div>
+
+            <div class="row">
+                <div class="hangman-draw">
+                    <div class="the-draw">
+                        <div class="the-stand">
+                            <div class="the-hang"></div>
+                            <div class="the-rope"></div>
+                            <div class="the-man">
+                                <div class="head"></div>
+                                <div class="body"></div>
+                                <div class="hands"></div>
+                                <div class="legs"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="letters"></div>
+            <div class="letters-guess">
+            </div>
+            <audio src="Audio/success.mp3" id="success"></audio>
+            <audio src="Audio/yaaas-38411.mp3" id="success-audio"></audio>
+            <audio
+                src="Audio/classic-game-action-negative-18-224576_cb3xZQTW.mp3"
+                id="fail"></audio>
+            <audio src="Audio/fail-trumpet-242645.mp3" id="fail-audio"></audio>
+
+            <div class="flex justify-center mt-6">
+                <button
+                    class="play-again bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded shadow transition duration-200">
+                    Play Again
+                </button>
+            </div>
+
+        </div>
+        <script src="JavaScript/main.js"></script>
+    </body>
+</html>
